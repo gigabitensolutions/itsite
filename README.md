@@ -9,6 +9,7 @@ Site estático pronto para deploy no GitHub Pages.
 - `assets/logo.svg`
 - `assets/favicon.svg`
 - `assets/favicon-apple.png`
+- `assets/whatsapp.svg`
 - `.nojekyll`
 
 ## Passos de Deploy (GitHub Pages)
@@ -23,7 +24,10 @@ Site estático pronto para deploy no GitHub Pages.
 > - CNAME ( stage-bar ) → vbiten.github.io
 
 ## Formulário (Formspree)
-Edite `index.html` e substitua `FORM_ID` pelo seu ID real do Formspree, por ex.: `f/abcd1234`.
+Edite `index.html` e substitua `FORM_ID` pelo seu ID real do Formspree (ex.: `f/abcd1234`).
+
+## Nota sobre Preços
+As faixas exibidas são **estimativas mensais** para referência. Os valores finais permanecem **sob proposta**.
 
 ## Dica SPA/rotas
 Se evoluir para SPA com rotas, adicione um `404.html` que redireciona para `/index.html`.

@@ -74,6 +74,24 @@ section{scroll-margin-top:84px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
 .tag{font-size:12px;color:var(--muted);border:1px dashed var(--border);padding:6px 10px;border-radius:999px}
 
+/* PRICING */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.p-card{position:relative;background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);transition:transform .25s ease, box-shadow .25s ease, border-color .25s}
+.p-card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 16px 40px rgba(0,0,0,.45);border-color:rgba(56,189,248,.45)}
+.p-card.highlight{border-color:rgba(56,189,248,.55);box-shadow:0 18px 42px rgba(34,211,238,.18)}
+.p-badge{position:absolute;top:-10px;left:16px;background:linear-gradient(120deg,#34d399,#a7f3d0);color:#0a1a11;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.3px}
+.p-desc{color:var(--muted);margin:-2px 0 6px}
+.p-features{margin:0;padding:0;display:grid;gap:8px}
+.p-features li{list-style:none;display:flex;align-items:flex-start;gap:8px}
+.p-features li::before{content:'✓';display:inline-block;transform:translateY(1px)}
+.p-cta{margin-top:auto;display:grid;gap:6px}
+
+/* Pricing amounts */
+.p-price{font-weight:800;font-size:clamp(20px,2.8vw,28px);margin:4px 0 8px}
+.p-price .p-currency{opacity:.85;margin-right:4px}
+.p-price .p-period{opacity:.6;margin-left:6px;font-weight:600;font-size:.8em}
+.p-price .p-proposal{background:linear-gradient(120deg,#38bdf8,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+
 /* CONTACT */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 form{display:grid;gap:12px}
@@ -83,6 +101,12 @@ textarea{min-height:130px;resize:vertical}
 .help{color:var(--muted);font-size:13px}
 .list{display:grid;gap:10px}
 .list li{list-style:none;display:flex;gap:10px;align-items:center;color:var(--muted)}
+
+/* WhatsApp button */
+.btn.whatsapp{background:linear-gradient(120deg,#25D366,#1ebe57);color:#ffffff;border:0;box-shadow:0 6px 24px rgba(37,211,102,.25)}
+.btn.whatsapp:hover{filter:brightness(1.05)}
+.btn .icon{width:18px;height:18px;display:inline-block}
+.contact-actions{margin-top:10px}
 
 /* FOOTER */
 footer{border-top:1px solid var(--border);color:var(--muted);padding:24px 16px;text-align:center}
@@ -95,6 +119,7 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:24px 16px;t
   .metrics{grid-template-columns:repeat(3,1fr)}
   .grid{grid-template-columns:repeat(2,1fr)}
   .contact{grid-template-columns:1fr}
+  .pricing{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:720px){
   .menu{display:none;position:absolute;inset:60px 16px auto;flex-direction:column;background:var(--bg-2);padding:12px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
@@ -102,12 +127,5 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:24px 16px;t
   .hamb{display:block}
   .metrics{grid-template-columns:1fr 1fr}
   .grid{grid-template-columns:1fr}
+  .pricing{grid-template-columns:1fr}
 }
-
-
-/* WhatsApp button */
-.btn.whatsapp{background:linear-gradient(120deg,#25D366,#1ebe57);color:#ffffff;border:0;box-shadow:0 6px 24px rgba(37,211,102,.25)}
-.btn.whatsapp:hover{filter:brightness(1.05)}
-.btn .icon{width:18px;height:18px;display:inline-block}
-.contact-actions{margin-top:10px}
-
