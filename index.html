@@ -135,7 +135,12 @@
         <!-- Redirecionamento (opcional) -->
         <input type="hidden" name="_subject" value="Novo contato pelo site" />
         <button class="btn primary" type="submit" id="sendBtn">Enviar</button>
-        <span class="help">Prefere direto no WhatsApp? <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">Clique aqui</a>.</span>
+        <div class="contact-actions">
+          <a class="btn whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+            <img src="assets/whatsapp.svg" alt="" aria-hidden="true" class="icon" />
+            WhatsApp
+          </a>
+        </div>
         <p id="status" class="help" role="status" aria-live="polite"></p>
       </form>
 

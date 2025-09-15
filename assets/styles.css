@@ -103,3 +103,11 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:24px 16px;t
   .metrics{grid-template-columns:1fr 1fr}
   .grid{grid-template-columns:1fr}
 }
+
+
+/* WhatsApp button */
+.btn.whatsapp{background:linear-gradient(120deg,#25D366,#1ebe57);color:#ffffff;border:0;box-shadow:0 6px 24px rgba(37,211,102,.25)}
+.btn.whatsapp:hover{filter:brightness(1.05)}
+.btn .icon{width:18px;height:18px;display:inline-block}
+.contact-actions{margin-top:10px}
+
