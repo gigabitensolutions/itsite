@@ -1,93 +1,163 @@
-<!-- File: index.html -->
-<div class="grid">
-<!-- Cardápio Digital -->
-<article class="card hover-raise">
-<span class="chip">Cardápio Digital</span>
-<h3>Cardápio com PIX e gestão de itens</h3>
-<p>Frontend estático (GitHub Pages) + backend serverless/VPS. Geração de QR Code PIX com valores dinâmicos, filtros, estoque e histórico. Painel admin com sincronização multi-dispositivo.</p>
-<div class="tags">
-<span class="tag">GitHub Pages</span>
-<span class="tag">PIX</span>
-<span class="tag">FastAPI/Firebase</span>
-<span class="tag">CI/CD</span>
-</div>
-</article>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>VBITEN — Soluções em TI</title>
+  <meta name="description" content="VBITEN — Soluções em TI: Cardápio digital, monitoramento Zabbix, apps de comanda, automação, cloud e integrações."/>
+  <meta property="og:title" content="VBITEN — Soluções em TI" />
+  <meta property="og:description" content="Cardápio digital, monitoramento Zabbix e apps de comanda para restaurantes. Cloud, automação e integrações." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vbiten.tech/" />
+  <meta name="theme-color" content="#0b1220" />
 
+  <!-- Favicon / App Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon-apple.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-<!-- Zabbix -->
-<article class="card hover-raise">
-<span class="chip">Observability</span>
-<h3>Monitoramento unificado com Zabbix</h3>
-<p>Templates custom, LLDS, discovery de serviços, traps SNMP, integração com Prometheus/Loki, dashboards executivos e fluxo de incidentes com canais e SLAs.</p>
-<div class="tags">
-<span class="tag">Zabbix 7.x</span>
-<span class="tag">Prometheus</span>
-<span class="tag">Loki/Grafana</span>
-<span class="tag">SLA/Alertas</span>
-</div>
-</article>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <!-- Background FX for desktop -->
+  <div class="fx-grid" aria-hidden="true"></div>
 
+  <!-- NAV -->
+  <nav class="nav" aria-label="Principal">
+    <div class="wrap">
+      <a class="brand" href="#home" aria-label="VBITEN Home">
+        <img class="logo" src="assets/logo.svg" alt="Logo VBITEN" width="36" height="36"/>
+        <span>VBITEN</span>
+      </a>
+      <button class="hamb" aria-label="Abrir menu" id="hamb">☰</button>
+      <div class="menu" id="menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#cases">Cases</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
 
-<!-- Comandas -->
-<article class="card hover-raise">
-<span class="chip">Hospitalidade</span>
-<h3>Apps de comanda para restaurantes</h3>
-<p>Fluxo completo de mesas, pedidos, fechamento e integração com fiscal/ERP. Operação offline-first, sincronismo, auditoria e exportações CSV/BI.</p>
-<div class="tags">
-<span class="tag">PWA</span>
-<span class="tag">Sync</span>
-<span class="tag">Relatórios</span>
-<span class="tag">ERP API</span>
-</div>
-</article>
-</div>
-</section>
+  <!-- HERO / HOME -->
+  <header id="home" class="hero">
+    <div>
+      <span class="kicker">Soluções em TI orientadas a resultado</span>
+      <h1>Arquitetamos, monitoramos e automatizamos para o seu negócio vender mais e parar menos.</h1>
+      <p class="lead">Da ideia ao deploy: cardápio digital com PIX, apps de comanda, integrações com ERP, observabilidade com Zabbix/Prometheus/Loki e esteiras CI/CD em cloud (Azure, AWS, GCP).</p>
+      <div class="cta">
+        <a class="btn primary" href="#contato">Fale com a VBITEN</a>
+        <a class="btn ghost" href="#cases">Ver Cases</a>
+      </div>
+      <div class="metrics" aria-label="Métricas">
+        <div class="metric"><b>99,9%</b><small>Uptime alvo</small></div>
+        <div class="metric"><b>24x7</b><small>Monitoramento</small></div>
+        <div class="metric"><b>+30%</b><small>Conversão média em cardápios</small></div>
+      </div>
+    </div>
 
+    <!-- Tech visual: terminal + glow card -->
+    <aside class="hero-card terminal" aria-label="Terminal de deploy">
+      <div class="term-title">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="title-text">vbiten@deploy:~</span>
+      </div>
+      <pre id="termLines" class="term-body" aria-live="polite"></pre>
+      <div class="term-glow" aria-hidden="true"></div>
+      <div class="term-footer">pipeline • IaC • CI/CD • Observability</div>
+    </aside>
+  </header>
 
-<!-- CONTATO -->
-<section id="contato" class="container">
-<h2 class="section-title">Contato</h2>
-<p class="section-sub">Vamos entender seu cenário e montar uma proposta técnica objetiva.</p>
+  <!-- CASES -->
+  <section id="cases" class="container">
+    <h2 class="section-title">Cases</h2>
+    <p class="section-sub">Alguns exemplos do que implementamos de ponta a ponta — da arquitetura ao monitoramento.</p>
 
+    <div class="grid">
+      <!-- Cardápio Digital -->
+      <article class="card hover-raise">
+        <span class="chip">Cardápio Digital</span>
+        <h3>Cardápio com PIX e gestão de itens</h3>
+        <p>Frontend estático (GitHub Pages) + backend serverless/VPS. Geração de QR Code PIX com valores dinâmicos, filtros, estoque e histórico. Painel admin com sincronização multi-dispositivo.</p>
+        <div class="tags">
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">PIX</span>
+          <span class="tag">FastAPI/Firebase</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </article>
 
-<div class="contact">
-<!-- Substitua o FORM_ID do Formspree abaixo pelo seu ID real (ex.: f/abcdjklm) -->
-<form id="contactForm" aria-label="Formulário de contato" action="https://formspree.io/f/FORM_ID" method="POST">
-<input name="nome" placeholder="Seu nome" required />
-<input type="email" name="email" placeholder="Seu e-mail" required />
-<input name="assunto" placeholder="Assunto" value="Contato via site" />
-<textarea name="mensagem" placeholder="Conte brevemente sua necessidade" required></textarea>
-<!-- Honeypot anti-spam -->
-<input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none" />
-<!-- Redirecionamento (opcional) -->
-<input type="hidden" name="_subject" value="Novo contato pelo site" />
-<button class="btn primary" type="submit" id="sendBtn">Enviar</button>
-<span class="help">Prefere direto no WhatsApp? <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">Clique aqui</a>.</span>
-<p id="status" class="help" role="status" aria-live="polite"></p>
-</form>
+      <!-- Zabbix -->
+      <article class="card hover-raise">
+        <span class="chip">Observability</span>
+        <h3>Monitoramento unificado com Zabbix</h3>
+        <p>Templates custom, LLDS, discovery de serviços, traps SNMP, integração com Prometheus/Loki, dashboards executivos e fluxo de incidentes com canais e SLAs.</p>
+        <div class="tags">
+          <span class="tag">Zabbix 7.x</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">Loki/Grafana</span>
+          <span class="tag">SLA/Alertas</span>
+        </div>
+      </article>
 
+      <!-- Comandas -->
+      <article class="card hover-raise">
+        <span class="chip">Hospitalidade</span>
+        <h3>Apps de comanda para restaurantes</h3>
+        <p>Fluxo completo de mesas, pedidos, fechamento e integração com fiscal/ERP. Operação offline-first, sincronismo, auditoria e exportações CSV/BI.</p>
+        <div class="tags">
+          <span class="tag">PWA</span>
+          <span class="tag">Sync</span>
+          <span class="tag">Relatórios</span>
+          <span class="tag">ERP API</span>
+        </div>
+      </article>
+    </div>
+  </section>
 
-<aside>
-<ul class="list" style="padding:0;margin-top:4px">
-<li>📍 São Paulo — Brasil</li>
-<li>✉️ <a href="mailto:contato@vbiten.tech">contato@vbiten.tech</a></li>
-<li>🔒 Segurança por padrão: HTTPS, backups e IAM segregado</li>
-<li>🧰 Suporte: horário comercial e plantão sob demanda</li>
-</ul>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
-<div class="metric"><b>+50</b><small>Implantações</small></div>
-<div class="metric"><b>8+</b><small>Anos de experiência</small></div>
-</div>
-</aside>
-</div>
-</section>
+  <!-- CONTATO -->
+  <section id="contato" class="container">
+    <h2 class="section-title">Contato</h2>
+    <p class="section-sub">Vamos entender seu cenário e montar uma proposta técnica objetiva.</p>
 
+    <div class="contact">
+      <!-- Substitua o FORM_ID do Formspree abaixo pelo seu ID real (ex.: f/abcdjklm) -->
+      <form id="contactForm" aria-label="Formulário de contato" action="https://formspree.io/f/FORM_ID" method="POST">
+        <input name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <input name="assunto" placeholder="Assunto" value="Contato via site" />
+        <textarea name="mensagem" placeholder="Conte brevemente sua necessidade" required></textarea>
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none" />
+        <!-- Redirecionamento (opcional) -->
+        <input type="hidden" name="_subject" value="Novo contato pelo site" />
+        <button class="btn primary" type="submit" id="sendBtn">Enviar</button>
+        <span class="help">Prefere direto no WhatsApp? <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">Clique aqui</a>.</span>
+        <p id="status" class="help" role="status" aria-live="polite"></p>
+      </form>
 
-<footer>
-© <span id="year"></span> VBITEN • vbiten.tech — Soluções em TI
-</footer>
+      <aside>
+        <ul class="list" style="padding:0;margin-top:4px">
+          <li>📍 São Paulo — Brasil</li>
+          <li>✉️ <a href="mailto:contato@vbiten.tech">contato@vbiten.tech</a></li>
+          <li>🔒 Segurança por padrão: HTTPS, backups e IAM segregado</li>
+          <li>🧰 Suporte: horário comercial e plantão sob demanda</li>
+        </ul>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+          <div class="metric"><b>+50</b><small>Implantações</small></div>
+          <div class="metric"><b>8+</b><small>Anos de experiência</small></div>
+        </div>
+      </aside>
+    </div>
+  </section>
 
+  <footer>
+    © <span id="year"></span> VBITEN • vbiten.tech — Soluções em TI
+  </footer>
 
-<script src="assets/app.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
